@@ -1,50 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Video Editor Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Your Name | Video Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Shivam Vishwakarma</h1>
-  <p>Professional Video Editor</p>
-</header>
-
-<section class="about">
-  <h2>About Me</h2>
-  <p>I create cinematic, YouTube, Instagram & commercial videos.</p>
+<!-- HERO -->
+<section class="hero">
+    <h1>Your Name</h1>
+    <p>Professional Video Editor & Visual Storyteller</p>
+    <a href="#contact" class="btn">Hire Me</a>
 </section>
 
-<section class="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Premiere Pro</li>
-    <li>After Effects</li>
-    <li>Color Grading</li>
-    <li>Motion Graphics</li>
-  </ul>
+<!-- ABOUT -->
+<section class="section">
+    <h2>About Me</h2>
+    <p class="text">
+        I’m a creative video editor specializing in YouTube videos, Instagram reels,
+        promotional ads, and cinematic storytelling. I help brands turn raw footage
+        into engaging content.
+    </p>
 </section>
 
-<section class="projects">
-  <h2>My Work</h2>
-  <video controls>
-    <source src="sample.mp4" type="video/mp4">
-  </video>
+<!-- WORK -->
+<section class="section dark">
+    <h2>Featured Work</h2>
+
+    <div class="work-grid">
+        <video controls>
+            <source src="assets/videos/sample.mp4" type="video/mp4">
+        </video>
+
+        <video controls>
+            <source src="assets/videos/sample.mp4" type="video/mp4">
+        </video>
+
+        <video controls>
+            <source src="assets/videos/sample.mp4" type="video/mp4">
+        </video>
+    </div>
 </section>
 
-<section class="contact">
-  <h2>Contact Me</h2>
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
+<!-- SERVICES -->
+<section class="section">
+    <h2>Services</h2>
+
+    <div class="services">
+        <div class="card">YouTube Video Editing</div>
+        <div class="card">Instagram Reels / Shorts</div>
+        <div class="card">Ads & Promo Videos</div>
+        <div class="card">Cinematic Color Grading</div>
+    </div>
 </section>
 
-<script src="firebase.js"></script>
-<script src="script.js"></script>
+<!-- CONTACT -->
+<section class="section dark" id="contact">
+    <h2>Contact</h2>
+    <p class="text">Let’s work together.</p>
+
+    <div class="contact">
+        <p>Email: yourmail@gmail.com</p>
+        <p>WhatsApp: +91XXXXXXXXXX</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Your Name. All rights reserved.
+</footer>
+
 </body>
 </html>
