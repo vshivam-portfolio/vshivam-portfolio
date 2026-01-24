@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 60px;
+  background: linear-gradient(135deg, #111, #222);
+}
+
+section {
+  padding: 50px 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+video {
+  width: 80%;
+  max-width: 600px;
+}
+
+input, textarea, button {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+}
+button {
+  background: #00ffcc;
+  border: none;
+  cursor: pointer;
+}
