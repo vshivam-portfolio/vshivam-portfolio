@@ -125,9 +125,52 @@
 <footer>
   © 2026 Your Name. Video Editor.
 </footer>
+<script>
+/* Hover autoplay */
+document.querySelectorAll('.reel-card video').forEach(video => {
+  video.addEventListener('mouseenter', () => video.play());
+  video.addEventListener('mouseleave', () => video.pause());
+});
+
+/* Modal */
+function openModal(src) {
+  const modal = document.getElementById('reelModal');
+  const video = document.getElementById('modalVideo');
+  video.src = src;
+  modal.style.display = 'flex';
+}
+
+function closeModal() {
+  const modal = document.getElementById('reelModal');
+  const video = document.getElementById('modalVideo');
+  video.pause();
+  video.src = "";
+  modal.style.display = 'none';
+}
+
+/* Filters */
+const buttons = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.reel-card');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    cards.forEach(card => {
+      card.style.display =
+        filter === 'all' || card.classList.contains(filter)
+          ? 'block'
+          : 'none';
+    });
+  });
+});
+</script>
 
 </body>
 </html>
+
 
 
 
