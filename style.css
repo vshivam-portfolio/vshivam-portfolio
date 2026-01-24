@@ -51,7 +51,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.4rem;
+  font-size: 6.4rem;
   line-height: 1.15;
 }
 
@@ -167,3 +167,4 @@ footer {
     padding: 80px 6%;
   }
 }
+
