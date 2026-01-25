@@ -1,16 +1,10 @@
-gsap.from("section, header", {
-  opacity:0,
-  y:50,
-  duration:1,
-  stagger:0.2
+// Simple hover animation using JS (if needed)
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.transform = 'translateY(-8px)';
+    });
+    card.addEventListener('mouseout', () => {
+        card.style.transform = 'translateY(0)';
+    });
 });
-
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-
-document.querySelector(".toggle").onclick = () => {
-  document.body.classList.toggle("light");
-};
