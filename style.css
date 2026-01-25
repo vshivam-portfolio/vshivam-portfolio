@@ -110,3 +110,45 @@ form button {
   position:fixed;
   pointer-events:none;
 }
+/* PREMIUM ANIMATION BASE */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Premium hover lift */
+.work-card,
+.service {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.work-card:hover,
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Button polish */
+.primary-btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(245,199,122,0.4);
+}
+
+/* Reel overlay */
+.reel-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.reel-card:hover::after {
+  opacity: 1;
+}
+
