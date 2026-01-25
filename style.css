@@ -36,7 +36,7 @@ nav {
 .hero-section {
     position: relative;
     height: 100vh;
-    background: url("bg-video-editor.jpg") center/cover no-repeat;
+    background: url("download (4).jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,4 +166,5 @@ button {
     cursor: pointer;
     border-radius: 50px;
 }
+
 
