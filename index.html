@@ -1,193 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shivam — Video Editor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor Portfolio</title>
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">MyEditPro</a>
+            <ul class="nav-links">
+                <li><a href="#works">Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- NAV -->
-<nav class="nav reveal">
-  <div class="logo">Shivam Vishwakarma</div>
-  <div class="nav-links">
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+    <!-- Hero -->
+    <section id="home" class="hero-section">
+        <h1>Hi, I’m a Video Editor</h1>
+        <p>I craft cinematic edits that elevate your story.</p>
+        <a href="#works" class="btn">View My Work</a>
+    </section>
 
-<!-- HERO -->
-<header class="hero">
-  <h1 class="reveal">Video Editor</h1>
-  <p class="reveal">I craft clean, engaging, story-driven videos that convert viewers into clients.</p>
-  <a href="#work" class="primary-btn reveal">View Work</a>
-</header>
+    <!-- Sample Works -->
+    <section id="works">
+        <h2>Sample Works</h2>
+        <div class="works-grid">
+            <div class="work-card">
+                <video src="sample.mp4" controls></video>
+                <h3>Promo Edit</h3>
+            </div>
+            <div class="work-card">
+                <video src="sample2.mp4" controls></video>
+                <h3>Music Montage</h3>
+            </div>
+            <div class="work-card">
+                <video src="sample3.mp4" controls></video>
+                <h3>Vlog Edit</h3>
+            </div>
+        </div>
+    </section>
 
-<!-- WORK -->
-<section class="section" id="work">
-  <h2 class="reveal">Selected Work</h2>
+    <!-- Pricing -->
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-cards">
+            <div class="card">
+                <h3>Basic</h3>
+                <p>Short edit</p>
+                <span>$100</span>
+            </div>
+            <div class="card">
+                <h3>Standard</h3>
+                <p>Social promo</p>
+                <span>$250</span>
+            </div>
+            <div class="card">
+                <h3>Premium</h3>
+                <p>Full project</p>
+                <span>$500</span>
+            </div>
+        </div>
+    </section>
 
-  <div class="work-grid">
-    <div class="work-card reveal">
-      <p class="tag">YouTube</p>
-      <h3>Cinematic YouTube Edit</h3>
-      <p class="muted">Long-form storytelling & pacing</p>
-    </div>
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-    <div class="work-card reveal">
-      <p class="tag">Reels</p>
-      <h3>Instagram Short-Form</h3>
-      <p class="muted">High retention edits</p>
-    </div>
-
-    <div class="work-card reveal">
-      <p class="tag">Ads</p>
-      <h3>Product Promo</h3>
-      <p class="muted">Conversion-focused visuals</p>
-    </div>
-  </div>
-
-  <p class="note reveal">▶ Full videos available on request or via private link</p>
-</section>
-
-<!-- REELS -->
-<section class="section dark" id="reels">
-  <h2 class="reveal">Reels & Shorts</h2>
-  <p class="muted reveal">High-retention short-form content</p>
-
-  <div class="reel-filters reveal">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="reel">Reels</button>
-    <button class="filter-btn" data-filter="short">Shorts</button>
-    <button class="filter-btn" data-filter="ad">Ads</button>
-  </div>
-
-  <div class="reels-grid">
-    <div class="reel-card reel reveal" onclick="openModal('assets/videos/reel1.mp4')">
-      <video muted loop playsinline>
-        <source src="assets/videos/reel1.mp4" type="video/mp4">
-      </video>
-      <span>Instagram Reel</span>
-    </div>
-
-    <div class="reel-card short reveal" onclick="openModal('assets/videos/reel2.mp4')">
-      <video muted loop playsinline>
-        <source src="assets/videos/reel2.mp4" type="video/mp4">
-      </video>
-      <span>YouTube Short</span>
-    </div>
-
-    <div class="reel-card ad reveal" onclick="openModal('assets/videos/reel3.mp4')">
-      <video muted loop playsinline>
-        <source src="assets/videos/reel3.mp4" type="video/mp4">
-      </video>
-      <span>Ad Creative</span>
-    </div>
-  </div>
-</section>
-
-<!-- MODAL -->
-<div class="reel-modal" id="reelModal">
-  <span class="close" onclick="closeModal()">×</span>
-  <video controls autoplay id="modalVideo"></video>
-</div>
-
-<!-- SERVICES -->
-<section class="section dark" id="services">
-  <h2 class="reveal">What I Do</h2>
-  <div class="services">
-    <div class="service reveal">YouTube Video Editing</div>
-    <div class="service reveal">Short-Form Reels & Shorts</div>
-    <div class="service reveal">Ads & Brand Promos</div>
-    <div class="service reveal">Color Grading</div>
-    <div class="service reveal">Motion Graphics</div>
-    <div class="service reveal">Audio Cleanup</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <h2 class="reveal">Let’s Work Together</h2>
-  <p class="muted reveal">Available for freelance & long-term projects</p>
-
-  <div class="contact-box reveal">
-    <p>Email: edithivestudio@gmail.com</p>
-    <p>WhatsApp: +91 8806476269</p>
-  </div>
-</section>
-
-<footer>
-  © 2026 Shivam Vishwakarma. Video Editor.
-</footer>
-
-<script>
-/* GSAP */
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.utils.toArray(".reveal").forEach(el => {
-  gsap.fromTo(el,
-    { opacity: 0, y: 40 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: el,
-        start: "top 85%"
-      }
-    }
-  );
-});
-
-/* Hover autoplay */
-document.querySelectorAll('.reel-card video').forEach(video => {
-  video.addEventListener('mouseenter', () => video.play());
-  video.addEventListener('mouseleave', () => video.pause());
-});
-
-/* Modal */
-function openModal(src) {
-  const modal = document.getElementById('reelModal');
-  const video = document.getElementById('modalVideo');
-  video.src = src;
-  modal.style.display = 'flex';
-}
-
-function closeModal() {
-  const modal = document.getElementById('reelModal');
-  const video = document.getElementById('modalVideo');
-  video.pause();
-  video.src = "";
-  modal.style.display = 'none';
-}
-
-/* Filters */
-const buttons = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.reel-card');
-
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    const filter = btn.dataset.filter;
-    cards.forEach(card => {
-      card.style.display =
-        filter === 'all' || card.classList.contains(filter)
-          ? 'block'
-          : 'none';
-    });
-  });
-});
-</script>
-
+    <!-- JS -->
+    <script src="script.js"></script>
 </body>
 </html>
-
