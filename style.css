@@ -1,52 +1,100 @@
-/* Custom smooth scroll and scrollbar */
-html {
-    scroll-behavior: smooth;
+:root {
+    --bg-dark:#050505;
+    --bg-card:#121212;
+    --primary:#ff6b00;
+    --text-gray:#a3a3a3;
+    --transition:all .3s ease;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
 }
 
-::-webkit-scrollbar-track {
-    background: #000;
+body{
+    background:var(--bg-dark);
+    color:#fff;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #ea580c;
-    border-radius: 10px;
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
 }
 
-/* Custom shadow/glow effect for the main images */
-.rounded-3xl {
-    transition: transform 0.5s ease;
+.highlight{color:var(--primary);}
+
+header{
+    position:fixed;
+    width:100%;
+    background:rgba(5,5,5,.9);
+    z-index:1000;
 }
 
-.rounded-3xl:hover {
-    transform: translateY(-10px);
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-/* Service Card Hover States */
-.service-card {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
 }
 
-.service-card:hover {
-    background-color: #1a1a1a;
-    transform: translateY(-5px);
+.nav-links a{
+    color:white;
+    text-decoration:none;
 }
 
-/* Animations for Entrance */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hamburger{display:none;}
+
+.hero{
+    padding-top:150px;
+    min-height:100vh;
 }
 
-section {
-    animation: fadeInUp 1s ease-out forwards;
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.hero-image{
+    width:100%;
+    border-radius:20px;
+}
+
+.btn{
+    padding:12px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:white;
+}
+
+.btn-outline{
+    border:2px solid var(--primary);
+    color:var(--primary);
+}
+
+.section-padding{padding:100px 0;}
+
+.service-card{
+    background:var(--bg-card);
+    padding:30px;
+    border-radius:16px;
+}
+
+@media(max-width:768px){
+    .hero-content{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+    .hamburger{display:block;}
 }
