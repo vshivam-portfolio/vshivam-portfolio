@@ -1,114 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Video Editor Portfolio</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-black text-white font-sans selection:bg-orange-500">
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">🎬</div>
+    <nav class="flex items-center justify-between px-10 py-6 sticky top-0 bg-black/80 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-play text-white"></i>
+            </div>
+        </div>
+        <div class="hidden md:flex gap-8 text-gray-300">
+            <a href="#home" class="hover:text-orange-500 transition">Home</a>
+            <a href="#about" class="hover:text-orange-500 transition">About</a>
+            <a href="#services" class="hover:text-orange-500 transition">Services</a>
+            <a href="#works" class="hover:text-orange-500 transition">Works</a>
+            <a href="#pricing" class="hover:text-orange-500 transition">Pricing</a>
+        </div>
+        <button class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold transition">
+            Get in Touch
+        </button>
+    </nav>
 
-  <div class="menu-toggle" id="menuToggle">
-    ☰
-  </div>
+    <section id="home" class="container mx-auto px-10 py-20 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+            <span class="bg-orange-900/30 text-orange-500 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest border border-orange-500/20">Professional Video Editor</span>
+            <h1 class="text-6xl md:text-7xl font-bold mt-6 leading-tight">
+                Reels & Shorts <br> <span class="text-orange-500">Video Editor</span>
+            </h1>
+            <p class="text-gray-400 mt-6 text-lg max-w-md">
+                Transforming raw footage into viral content that captivates audiences and drives engagement across all social media platforms.
+            </p>
+            <div class="flex gap-4 mt-10">
+                <button class="bg-orange-600 hover:bg-orange-700 px-8 py-4 rounded-full font-bold transition">Start Your Project</button>
+                <button class="border border-orange-500/50 hover:bg-orange-500/10 px-8 py-4 rounded-full font-bold transition">View Portfolio</button>
+            </div>
+            <div class="flex gap-12 mt-16">
+                <div><h3 class="text-3xl font-bold">500+</h3><p class="text-gray-500">Projects</p></div>
+                <div><h3 class="text-3xl font-bold">50M+</h3><p class="text-gray-500">Views</p></div>
+                <div><h3 class="text-3xl font-bold">98%</h3><p class="text-gray-500">Satisfaction</p></div>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="rounded-3xl overflow-hidden border border-orange-500/20 shadow-2xl shadow-orange-500/10">
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=800" alt="Editor" class="w-full">
+            </div>
+        </div>
+    </section>
 
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home" class="nav-link active">Home</a></li>
-    <li><a href="#about" class="nav-link">About</a></li>
-    <li><a href="#services" class="nav-link">Services</a></li>
-    <li><a href="#portfolio" class="nav-link">Works</a></li>
-    <li><a href="#pricing" class="nav-link">Pricing</a></li>
-    <li><a href="#contact" class="nav-link">Contact</a></li>
-  </ul>
+    <section id="about" class="bg-[#0a0a0a] py-24 px-10">
+        <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="rounded-3xl overflow-hidden border border-green-500/20 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&q=80&w=800" alt="Setup" class="w-full">
+            </div>
+            <div>
+                <span class="text-orange-500 font-bold uppercase text-sm">About Me</span>
+                <h2 class="text-5xl font-bold mt-4">Crafting Stories That <span class="text-orange-500">Go Viral</span></h2>
+                <p class="text-gray-400 mt-6 leading-relaxed">
+                    With over 5 years of experience in video editing, I specialize in creating high-impact short-form content that captures attention in the first 3 seconds and keeps viewers engaged until the very end.
+                </p>
+                <p class="text-gray-400 mt-4 leading-relaxed">
+                    My expertise spans across Instagram Reels, YouTube Shorts, TikTok videos, and all major social media platforms. I understand the algorithms, trends, and psychology behind viral content.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mt-10">
+                    <div class="bg-[#111] p-6 rounded-2xl border border-gray-800">
+                        <i class="fas fa-award text-orange-500 text-2xl mb-4"></i>
+                        <h4 class="text-2xl font-bold">5+ Years</h4>
+                        <p class="text-gray-500 text-sm">Professional Experience</p>
+                    </div>
+                    <div class="bg-[#111] p-6 rounded-2xl border border-gray-800">
+                        <i class="fas fa-users text-orange-500 text-2xl mb-4"></i>
+                        <h4 class="text-2xl font-bold">200+</h4>
+                        <p class="text-gray-500 text-sm">Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <button class="btn-primary desktop-btn">Get in Touch</button>
-</nav>
+    <section id="services" class="py-24 px-10">
+        <div class="text-center mb-16">
+            <span class="text-orange-500 font-bold uppercase text-sm">Services</span>
+            <h2 class="text-5xl font-bold mt-4">What I <span class="text-orange-500">Offer</span></h2>
+            <p class="text-gray-400 mt-4">Comprehensive video editing services designed to make your content stand out</p>
+        </div>
+        <div class="container mx-auto grid md:grid-cols-3 gap-8">
+            <div class="service-card bg-[#111] p-8 rounded-3xl border border-gray-800 hover:border-orange-500 transition group">
+                <div class="bg-orange-900/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-film text-orange-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Reel Editing</h3>
+                <p class="text-gray-500 mb-6">Transform your raw footage into captivating Instagram Reels that stop the scroll.</p>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Hook optimization</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Trending transitions</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Audio sync</li>
+                </ul>
+            </div>
+            <div class="service-card bg-[#111] p-8 rounded-3xl border border-gray-800 hover:border-orange-500 transition group">
+                <div class="bg-orange-900/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fab fa-youtube text-orange-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Shorts Editing</h3>
+                <p class="text-gray-500 mb-6">Create addictive YouTube Shorts that maximize watch time and boost growth.</p>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Fast-paced cuts</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Dynamic text</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Viral formatting</li>
+                </ul>
+            </div>
+            <div class="service-card bg-[#111] p-8 rounded-3xl border border-orange-500 transition group shadow-lg shadow-orange-500/10">
+                <div class="bg-orange-900/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-magic text-orange-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Motion Graphics</h3>
+                <p class="text-gray-500 mb-6">Eye-catching animations and graphics that elevate your storytelling.</p>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Logo animation</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Lower thirds</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Visual effects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-text">
-    <span class="badge">PROFESSIONAL VIDEO EDITOR</span>
-    <h1>Reels & Shorts<br><span>Video Editor</span></h1>
-    <p>Transforming raw footage into viral short-form content.</p>
+    <section id="pricing" class="py-24 px-10 bg-[#0a0a0a]">
+        <div class="text-center mb-16">
+            <span class="text-orange-500 font-bold uppercase text-sm">Pricing</span>
+            <h2 class="text-5xl font-bold mt-4">Choose Your <span class="text-orange-500">Plan</span></h2>
+        </div>
+        <div class="container mx-auto grid md:grid-cols-3 gap-8 max-w-6xl">
+            <div class="bg-[#111] p-10 rounded-3xl border border-gray-800 flex flex-col items-center">
+                <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                <p class="text-gray-500 text-sm mb-6">Perfect for individuals</p>
+                <div class="text-5xl font-bold mb-8">$299<span class="text-lg text-gray-500">/month</span></div>
+                <ul class="w-full space-y-4 mb-10 text-gray-400">
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> 5 videos per month</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Basic color grading</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> 48-hour delivery</li>
+                </ul>
+                <button class="w-full py-3 rounded-xl border border-orange-500 text-orange-500 font-bold hover:bg-orange-500 hover:text-white transition">Choose Plan</button>
+            </div>
+            <div class="bg-[#111] p-10 rounded-3xl border-2 border-orange-500 flex flex-col items-center relative scale-105 shadow-2xl shadow-orange-500/20">
+                <span class="absolute -top-4 bg-orange-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Most Popular</span>
+                <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                <p class="text-gray-500 text-sm mb-6">Most popular for brands</p>
+                <div class="text-5xl font-bold mb-8">$599<span class="text-lg text-gray-500">/month</span></div>
+                <ul class="w-full space-y-4 mb-10 text-gray-400">
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> 15 videos per month</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Advanced color grading</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Motion graphics</li>
+                </ul>
+                <button class="w-full py-3 rounded-xl bg-orange-600 text-white font-bold hover:bg-orange-700 transition">Choose Plan</button>
+            </div>
+            <div class="bg-[#111] p-10 rounded-3xl border border-gray-800 flex flex-col items-center">
+                <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                <p class="text-gray-500 text-sm mb-6">For agencies & businesses</p>
+                <div class="text-5xl font-bold mb-8">$1299<span class="text-lg text-gray-500">/month</span></div>
+                <ul class="w-full space-y-4 mb-10 text-gray-400">
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Unlimited videos</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Custom animations</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> 12-hour delivery</li>
+                </ul>
+                <button class="w-full py-3 rounded-xl border border-orange-500 text-orange-500 font-bold hover:bg-orange-500 hover:text-white transition">Choose Plan</button>
+            </div>
+        </div>
+    </section>
 
-    <div class="hero-buttons">
-      <button class="btn-primary">Start Project</button>
-      <button class="btn-outline">View Work</button>
-    </div>
-  </div>
+    <footer id="contact" class="py-24 px-10 border-t border-gray-900">
+        <div class="container mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-5xl font-bold">Let's Create Something <span class="text-orange-500">Amazing</span></h2>
+                <p class="text-gray-500 mt-6 mb-12">Ready to take your content to the next level? Get in touch and let's discuss your project.</p>
+                
+                <div class="bg-[#111] p-6 rounded-2xl mb-6 flex items-center gap-6 border border-gray-800">
+                    <div class="bg-orange-900/20 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-envelope text-orange-500"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-sm">Email Me</p>
+                        <p class="font-bold">hello@videoeditor.com</p>
+                    </div>
+                </div>
 
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868">
-  </div>
-</section>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center hover:bg-orange-600 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center hover:bg-orange-600 transition"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center hover:bg-orange-600 transition"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <form class="bg-[#111] p-10 rounded-3xl border border-gray-800 space-y-6">
+                <input type="text" placeholder="Your Name" class="w-full bg-black border border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500">
+                <input type="email" placeholder="Email Address" class="w-full bg-black border border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500">
+                <select class="w-full bg-black border border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500">
+                    <option>Select a service</option>
+                    <option>Reel Editing</option>
+                    <option>Shorts Editing</option>
+                </select>
+                <textarea placeholder="Project Details" rows="4" class="w-full bg-black border border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500"></textarea>
+                <button class="w-full bg-orange-600 hover:bg-orange-700 py-4 rounded-xl font-bold transition">Send Message</button>
+            </form>
+        </div>
+        <div class="mt-20 text-center text-gray-600 text-sm border-t border-gray-900 pt-10">
+            © 2025 Video Editor Portfolio. All rights reserved. | Powered by Readdy
+        </div>
+    </footer>
 
-<section class="about" id="about">
-  <div>
-    <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d">
-  </div>
-  <div>
-    <span class="section-tag">ABOUT</span>
-    <h2>Stories That <span>Convert</span></h2>
-    <p>5+ years crafting viral reels & shorts.</p>
-  </div>
-</section>
-
-<section class="services" id="services">
-  <span class="section-tag">SERVICES</span>
-  <h2>What I <span>Offer</span></h2>
-
-  <div class="service-grid">
-    <div class="service-card">Reel Editing</div>
-    <div class="service-card">Shorts Editing</div>
-    <div class="service-card">Motion Graphics</div>
-    <div class="service-card">Color Grading</div>
-    <div class="service-card">Social Optimization</div>
-    <div class="service-card">Audio Enhancement</div>
-  </div>
-</section>
-
-<section class="portfolio" id="portfolio">
-  <span class="section-tag">WORKS</span>
-  <h2>Sample <span>Projects</span></h2>
-
-  <div class="portfolio-grid">
-    <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf">
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
-  </div>
-</section>
-
-<section class="pricing" id="pricing">
-  <span class="section-tag">PRICING</span>
-  <h2>Choose <span>Plan</span></h2>
-
-  <div class="pricing-grid">
-    <div class="price-card">Starter<br><h1>$299</h1></div>
-    <div class="price-card popular">Pro<br><h1>$599</h1></div>
-    <div class="price-card">Enterprise<br><h1>$1299</h1></div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <span class="section-tag">CONTACT</span>
-  <h2>Let’s <span>Work</span></h2>
-
-  <form class="contact-form">
-    <input placeholder="Name">
-    <input placeholder="Email">
-    <textarea placeholder="Project details"></textarea>
-    <button class="btn-primary">Send</button>
-  </form>
-</section>
-
-<footer>© 2025 Video Editor</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
