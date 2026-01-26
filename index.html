@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Vishwakarma | Pro Video Editor</title>
+    <title>Shivam Vishwakarma | Video Editor</title>
 
-    <!-- Google Font -->
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Main CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- PAGE LOADER -->
+<div id="page-loader"><span></span></div>
+
+<!-- HEADER -->
 <header>
     <div class="container">
         <nav>
-            <div class="logo">
-                <i class="fas fa-video"></i> Shivam.Edit
-            </div>
+            <div class="logo"><i class="fas fa-video"></i> Shivam.Edit</div>
 
             <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
+                <li><a href="#hero" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <a href="#contact" class="btn btn-primary nav-cta">Get In Touch</a>
 
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
@@ -42,103 +39,72 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="badge">PROFESSIONAL VIDEO EDITOR</div>
-                <h1>Reels & Shorts <br><span class="highlight">Video Editor</span></h1>
-                <p>Transforming raw footage into viral content that captivates audiences.</p>
-
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                    <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
-                </div>
-            </div>
-
-            <div class="hero-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8efe85" class="hero-image">
-            </div>
+    <div class="container hero-content">
+        <div class="hero-text">
+            <span class="badge">PRO VIDEO EDITOR</span>
+            <h1>Shivam Vishwakarma <span>Video Editor</span></h1>
+            <p>Turning raw clips into high-retention viral content.</p>
+            <a href="#contact" class="btn primary">Start Project</a>
         </div>
+
+        <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8efe85" class="hero-img" alt="Video Editing Setup">
     </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section-padding" id="about">
-    <div class="container about-content">
-        <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" class="hero-image">
-        </div>
-
-        <div class="about-text">
-            <h4>ABOUT ME</h4>
-            <h2>Crafting Stories That <span class="highlight">Go Viral</span></h2>
-            <p>5+ years of experience creating viral short-form content.</p>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <i class="fas fa-certificate"></i>
-                    <h3>5+ Years</h3>
-                    <span>Experience</span>
-                </div>
-                <div class="stat-card">
-                    <i class="fas fa-users"></i>
-                    <h3>200+</h3>
-                    <span>Clients</span>
-                </div>
-            </div>
+<section id="about">
+    <div class="container grid">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" alt="Profile">
+        <div>
+            <h2>About Me</h2>
+            <p>
+                I’m a professional short-form video editor with 5+ years of experience.
+                I help creators and brands grow using Reels, Shorts, and viral edits
+                designed to hook viewers in the first 3 seconds.
+            </p>
         </div>
     </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section-padding" id="services">
+<!-- PORTFOLIO -->
+<section id="portfolio">
     <div class="container">
-        <div class="section-title">
-            <h4>Services</h4>
-            <h2>What I <span class="highlight">Offer</span></h2>
+        <h2 class="section-title">Sample Works</h2>
+
+        <div class="filters">
+            <button class="portfolio-filter active">All Works</button>
+            <button class="portfolio-filter">Reels</button>
+            <button class="portfolio-filter">Shorts</button>
         </div>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-film"></i></div>
-                <h3>Reel Editing</h3>
-                <p>High-retention Instagram Reels.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon-box"><i class="fab fa-youtube"></i></div>
-                <h3>Shorts Editing</h3>
-                <p>YouTube Shorts optimized for growth.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-magic"></i></div>
-                <h3>Motion Graphics</h3>
-                <p>Eye-catching animations.</p>
-            </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">Reels</div>
+            <div class="portfolio-item">Shorts</div>
+            <div class="portfolio-item">Reels</div>
+            <div class="portfolio-item">Shorts</div>
         </div>
     </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section-padding" id="contact">
+<section id="contact">
     <div class="container">
-        <div class="section-title">
-            <h4>Contact</h4>
-            <h2>Let's Work <span class="highlight">Together</span></h2>
-        </div>
+        <h2 class="section-title">Let’s Work Together</h2>
 
-        <form class="contact-form">
-            <input class="form-control" placeholder="Your Name">
-            <input class="form-control" placeholder="Email">
-            <textarea class="form-control" placeholder="Project Details"></textarea>
-            <button class="btn btn-primary">Send Message</button>
+        <form class="contact-form"
+              action="https://formspree.io/f/xxxxxx"
+              method="POST">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Tell me about your project" required></textarea>
+            <button class="btn primary">Send Message</button>
         </form>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Shivam Vishwakarma</p>
+    © 2026 Shivam Vishwakarma. All rights reserved.
 </footer>
 
 <script src="script.js"></script>
