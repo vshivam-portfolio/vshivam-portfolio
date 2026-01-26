@@ -808,55 +808,41 @@
         </div>
     </section>
 
-    <section class="section-padding" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h4>Portfolio</h4>
-                <h2>Sample <span class="highlight">Works</span></h2>
-            </div>
+  <!-- PORTFOLIO -->
+<section id="portfolio">
+    <div class="container">
+        <h2 class="section-title">Sample Works</h2>
 
-            <div class="portfolio-nav">
-                <span class="portfolio-filter active">All Works</span>
-                <span class="portfolio-filter">Reels</span>
-                <span class="portfolio-filter">Shorts</span>
-            </div>
-
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" alt="Reel 1">
-                    <div class="portfolio-overlay">
-                        <h3>Fitness Motivation</h3>
-                        <p>Instagram Reel • 2M Views</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop" alt="Reel 2">
-                    <div class="portfolio-overlay">
-                        <h3>Tech Review</h3>
-                        <p>YouTube Shorts • 500k Views</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2010&auto=format&fit=crop" alt="Reel 3">
-                    <div class="portfolio-overlay">
-                        <h3>Travel Vlog</h3>
-                        <p>TikTok • 1.2M Views</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=2070&auto=format&fit=crop" alt="Reel 4">
-                    <div class="portfolio-overlay">
-                        <h3>Fashion Edit</h3>
-                        <p>Instagram Reel • 800k Views</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="#" class="btn btn-outline">View All Projects</a>
-            </div>
+        <div class="filters">
+            <button class="portfolio-filter active">All Works</button>
+            <button class="portfolio-filter">Reels</button>
+            <button class="portfolio-filter">Shorts</button>
         </div>
-    </section>
+
+        <div class="portfolio-grid">
+
+            <!-- VIDEO ITEM 1 -->
+            <div class="portfolio-item" data-type="reels">
+                <video src="videos/reel1.mp4" muted></video>
+                <div class="portfolio-overlay">Reel Project</div>
+            </div>
+
+            <!-- VIDEO ITEM 2 -->
+            <div class="portfolio-item" data-type="shorts">
+                <video src="videos/short1.mp4" muted></video>
+                <div class="portfolio-overlay">Shorts Project</div>
+            </div>
+
+            <!-- VIDEO ITEM 3 -->
+            <div class="portfolio-item" data-type="reels">
+                <video src="videos/reel2.mp4" muted></video>
+                <div class="portfolio-overlay">Reel Project</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
     <section class="section-padding" id="pricing">
         <div class="container">
@@ -1027,4 +1013,5 @@
     </script>
 </body>
 </html>
+
 
