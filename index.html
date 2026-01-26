@@ -1,91 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Editor Portfolio</title>
-    <!-- Poppins Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reels & Shorts Video Editor</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <a href="#home" class="logo">MyEditPro</a>
-            <ul class="nav-links">
-                <li><a href="#works">Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-  <section id="home" class="hero-section">
-    <div class="hero-overlay"></div>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🎬</div>
 
-    <div class="hero-content">
-        <h1>Hi, I’m a Video Editor</h1>
-        <p>I craft cinematic edits that elevate your story.</p>
-        <a href="#works" class="btn">View My Work</a>
+  <ul class="nav-links">
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Works</li>
+    <li>Pricing</li>
+  </ul>
+
+  <button class="btn-primary">Get in Touch</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="badge">PROFESSIONAL VIDEO EDITOR</span>
+    <h1>Reels & Shorts<br><span>Video Editor</span></h1>
+
+    <p>
+      Transforming raw footage into viral content that captivates audiences
+      and drives engagement across all social platforms.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn-primary">Start Your Project</button>
+      <button class="btn-outline">View Portfolio</button>
     </div>
+
+    <div class="stats">
+      <div>
+        <h2>500+</h2>
+        <p>Projects</p>
+      </div>
+      <div>
+        <h2>50M+</h2>
+        <p>Views</p>
+      </div>
+      <div>
+        <h2>98%</h2>
+        <p>Satisfaction</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868" alt="Video Editor">
+  </div>
 </section>
 
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-image">
+    <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d" alt="">
+  </div>
 
-    <!-- Sample Works -->
-    <section id="works">
-        <h2>Sample Works</h2>
-        <div class="works-grid">
-            <div class="work-card">
-                <video src="sample.mp4" controls></video>
-                <h3>Promo Edit</h3>
-            </div>
-            <div class="work-card">
-                <video src="sample2.mp4" controls></video>
-                <h3>Music Montage</h3>
-            </div>
-            <div class="work-card">
-                <video src="sample3.mp4" controls></video>
-                <h3>Vlog Edit</h3>
-            </div>
-        </div>
-    </section>
+  <div class="about-text">
+    <span class="section-tag">ABOUT ME</span>
+    <h2>Crafting Stories That <span>Go Viral</span></h2>
 
-    <!-- Pricing -->
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <div class="pricing-cards">
-            <div class="card">
-                <h3>Basic</h3>
-                <p>Short edit</p>
-                <span>$100</span>
-            </div>
-            <div class="card">
-                <h3>Standard</h3>
-                <p>Social promo</p>
-                <span>$250</span>
-            </div>
-            <div class="card">
-                <h3>Premium</h3>
-                <p>Full project</p>
-                <span>$500</span>
-            </div>
-        </div>
-    </section>
+    <p>
+      With over 5 years of experience in video editing, I specialize in creating
+      high-impact short-form content that captures attention in the first 3 seconds.
+    </p>
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    <div class="about-cards">
+      <div class="info-card">
+        <h3>5+ Years</h3>
+        <p>Experience</p>
+      </div>
+      <div class="info-card">
+        <h3>200+</h3>
+        <p>Happy Clients</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- JS -->
-    <script src="script.js"></script>
+<!-- SERVICES -->
+<section class="services">
+  <span class="section-tag">SERVICES</span>
+  <h2>What I <span>Offer</span></h2>
+
+  <div class="service-grid">
+    <div class="service-card">Reel Editing</div>
+    <div class="service-card">Shorts Editing</div>
+    <div class="service-card">Motion Graphics</div>
+    <div class="service-card">Color Grading</div>
+    <div class="service-card">Social Media Optimization</div>
+    <div class="service-card">Audio Enhancement</div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <span class="section-tag">PORTFOLIO</span>
+  <h2>Sample <span>Works</span></h2>
+
+  <div class="portfolio-grid">
+    <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <span class="section-tag">PRICING</span>
+  <h2>Choose Your <span>Plan</span></h2>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <h3>Starter</h3>
+      <h1>$299</h1>
+    </div>
+
+    <div class="price-card popular">
+      <h3>Professional</h3>
+      <h1>$599</h1>
+    </div>
+
+    <div class="price-card">
+      <h3>Enterprise</h3>
+      <h1>$1299</h1>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <span class="section-tag">CONTACT</span>
+  <h2>Let's Create Something <span>Amazing</span></h2>
+
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email Address">
+    <textarea placeholder="Tell me about your project..."></textarea>
+    <button class="btn-primary">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Video Editor Portfolio. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
