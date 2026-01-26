@@ -1,25 +1,36 @@
-const cards = document.querySelectorAll('.service-card, .price-card');
+// Mobile menu toggle
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navLinks");
 
-cards.forEach(card => {
-  // Disable tilt on touch devices
-  if (window.matchMedia("(hover: none)").matches) return;
+toggle.onclick = () => {
+  nav.classList.toggle("show");
+};
 
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+// Close menu on click
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("show");
+  });
+});
 
-    const rotateX = (y / rect.height - 0.5) * 8;
-    const rotateY = (x / rect.width - 0.5) * -8;
+// Active section highlight
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
 
-    card.style.transform = `
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-      scale(1.04)
-    `;
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
   });
 
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
   });
 });
