@@ -1,7 +1,9 @@
-// Premium 3D hover tilt animation for cards
 const cards = document.querySelectorAll('.service-card, .price-card');
 
 cards.forEach(card => {
+  // Disable tilt on touch devices
+  if (window.matchMedia("(hover: none)").matches) return;
+
   card.addEventListener('mousemove', e => {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
