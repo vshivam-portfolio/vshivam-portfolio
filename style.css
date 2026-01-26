@@ -282,3 +282,128 @@ footer {
     padding: 20px;
   }
 }
+/* =========================
+   RESPONSIVE DESIGN (ALL DEVICES)
+   ========================= */
+
+/* Large screens (4K / ultra-wide) */
+@media (min-width: 1600px) {
+  .hero, .about, .services, .portfolio, .pricing, .contact {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .hero {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .service-grid,
+  .portfolio-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets & large phones */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nav-links {
+    display: none; /* clean mobile look */
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .services,
+  .portfolio,
+  .pricing,
+  .contact,
+  .about {
+    padding: 50px 20px;
+  }
+
+  .service-grid,
+  .portfolio-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+
