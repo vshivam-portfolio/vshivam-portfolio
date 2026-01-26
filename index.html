@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reels & Shorts Video Editor</title>
+  <title>Video Editor Portfolio</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,84 +14,52 @@
 <nav class="navbar">
   <div class="logo">🎬</div>
 
-  <ul class="nav-links">
-    <li>Home</li>
-    <li>About</li>
-    <li>Services</li>
-    <li>Works</li>
-    <li>Pricing</li>
+  <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#services" class="nav-link">Services</a></li>
+    <li><a href="#portfolio" class="nav-link">Works</a></li>
+    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
 
-  <button class="btn-primary">Get in Touch</button>
+  <button class="btn-primary desktop-btn">Get in Touch</button>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
   <div class="hero-text">
     <span class="badge">PROFESSIONAL VIDEO EDITOR</span>
     <h1>Reels & Shorts<br><span>Video Editor</span></h1>
-
-    <p>
-      Transforming raw footage into viral content that captivates audiences
-      and drives engagement across all social platforms.
-    </p>
+    <p>Transforming raw footage into viral short-form content.</p>
 
     <div class="hero-buttons">
-      <button class="btn-primary">Start Your Project</button>
-      <button class="btn-outline">View Portfolio</button>
-    </div>
-
-    <div class="stats">
-      <div>
-        <h2>500+</h2>
-        <p>Projects</p>
-      </div>
-      <div>
-        <h2>50M+</h2>
-        <p>Views</p>
-      </div>
-      <div>
-        <h2>98%</h2>
-        <p>Satisfaction</p>
-      </div>
+      <button class="btn-primary">Start Project</button>
+      <button class="btn-outline">View Work</button>
     </div>
   </div>
 
   <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868" alt="Video Editor">
+    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868">
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-  <div class="about-image">
-    <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d" alt="">
+<section class="about" id="about">
+  <div>
+    <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d">
   </div>
-
-  <div class="about-text">
-    <span class="section-tag">ABOUT ME</span>
-    <h2>Crafting Stories That <span>Go Viral</span></h2>
-
-    <p>
-      With over 5 years of experience in video editing, I specialize in creating
-      high-impact short-form content that captures attention in the first 3 seconds.
-    </p>
-
-    <div class="about-cards">
-      <div class="info-card">
-        <h3>5+ Years</h3>
-        <p>Experience</p>
-      </div>
-      <div class="info-card">
-        <h3>200+</h3>
-        <p>Happy Clients</p>
-      </div>
-    </div>
+  <div>
+    <span class="section-tag">ABOUT</span>
+    <h2>Stories That <span>Convert</span></h2>
+    <p>5+ years crafting viral reels & shorts.</p>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services">
+<section class="services" id="services">
   <span class="section-tag">SERVICES</span>
   <h2>What I <span>Offer</span></h2>
 
@@ -102,15 +68,14 @@
     <div class="service-card">Shorts Editing</div>
     <div class="service-card">Motion Graphics</div>
     <div class="service-card">Color Grading</div>
-    <div class="service-card">Social Media Optimization</div>
+    <div class="service-card">Social Optimization</div>
     <div class="service-card">Audio Enhancement</div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="portfolio">
-  <span class="section-tag">PORTFOLIO</span>
-  <h2>Sample <span>Works</span></h2>
+<section class="portfolio" id="portfolio">
+  <span class="section-tag">WORKS</span>
+  <h2>Sample <span>Projects</span></h2>
 
   <div class="portfolio-grid">
     <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf">
@@ -119,45 +84,30 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing">
+<section class="pricing" id="pricing">
   <span class="section-tag">PRICING</span>
-  <h2>Choose Your <span>Plan</span></h2>
+  <h2>Choose <span>Plan</span></h2>
 
   <div class="pricing-grid">
-    <div class="price-card">
-      <h3>Starter</h3>
-      <h1>$299</h1>
-    </div>
-
-    <div class="price-card popular">
-      <h3>Professional</h3>
-      <h1>$599</h1>
-    </div>
-
-    <div class="price-card">
-      <h3>Enterprise</h3>
-      <h1>$1299</h1>
-    </div>
+    <div class="price-card">Starter<br><h1>$299</h1></div>
+    <div class="price-card popular">Pro<br><h1>$599</h1></div>
+    <div class="price-card">Enterprise<br><h1>$1299</h1></div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
+<section class="contact" id="contact">
   <span class="section-tag">CONTACT</span>
-  <h2>Let's Create Something <span>Amazing</span></h2>
+  <h2>Let’s <span>Work</span></h2>
 
   <form class="contact-form">
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Email Address">
-    <textarea placeholder="Tell me about your project..."></textarea>
-    <button class="btn-primary">Send Message</button>
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <textarea placeholder="Project details"></textarea>
+    <button class="btn-primary">Send</button>
   </form>
 </section>
 
-<footer>
-  © 2025 Video Editor Portfolio. All rights reserved.
-</footer>
+<footer>© 2025 Video Editor</footer>
 
 <script src="script.js"></script>
 </body>
