@@ -1,138 +1,52 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-html{scroll-behavior:smooth}
-body{background:#0b0b0b;color:#fff}
-
-span{color:#ff7a18}
-.section-tag{color:#ff7a18;letter-spacing:2px;font-size:13px}
-
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 60px;
-  position:sticky;
-  top:0;
-  background:#0b0b0b;
-  z-index:999;
+/* Custom smooth scroll and scrollbar */
+html {
+    scroll-behavior: smooth;
 }
 
-.menu-toggle{
-  display:none;
-  font-size:26px;
-  cursor:pointer;
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.nav-links{
-  display:flex;
-  gap:25px;
-  list-style:none;
+::-webkit-scrollbar-track {
+    background: #000;
 }
 
-.nav-links a{
-  text-decoration:none;
-  color:#fff;
-  position:relative;
+::-webkit-scrollbar-thumb {
+    background: #ea580c;
+    border-radius: 10px;
 }
 
-.nav-links a.active,
-.nav-links a:hover{
-  color:#ff7a18;
+/* Custom shadow/glow effect for the main images */
+.rounded-3xl {
+    transition: transform 0.5s ease;
 }
 
-.btn-primary{
-  background:linear-gradient(135deg,#ff7a18,#ff9a3d);
-  border:none;
-  padding:12px 26px;
-  border-radius:30px;
-  cursor:pointer;
+.rounded-3xl:hover {
+    transform: translateY(-10px);
 }
 
-.btn-outline{
-  border:1px solid #ff7a18;
-  background:transparent;
-  color:#ff7a18;
-  padding:12px 26px;
-  border-radius:30px;
+/* Service Card Hover States */
+.service-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  padding:80px;
-  gap:40px;
+.service-card:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-5px);
 }
 
-.hero-image img{width:100%;border-radius:25px}
-
-.about,.services,.portfolio,.pricing,.contact{
-  padding:80px;
-  text-align:center;
+/* Animations for Entrance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.service-grid,.portfolio-grid,.pricing-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  margin-top:40px;
-}
-
-.service-card,.price-card{
-  background:#121212;
-  padding:40px;
-  border-radius:25px;
-  transition:.3s;
-}
-
-.service-card:hover,.price-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 60px rgba(255,122,24,.3);
-}
-
-.popular{
-  border:1px solid #ff7a18;
-}
-
-.contact-form{
-  max-width:400px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-.contact-form input,
-.contact-form textarea{
-  padding:14px;
-  background:#111;
-  border:1px solid #222;
-  color:#fff;
-  border-radius:10px;
-}
-
-footer{text-align:center;padding:30px;opacity:.6}
-
-/* ---------- MOBILE ---------- */
-@media(max-width:768px){
-  .menu-toggle{display:block}
-  .nav-links{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#0b0b0b;
-    flex-direction:column;
-    align-items:center;
-    display:none;
-    padding:20px 0;
-  }
-  .nav-links.show{display:flex}
-  .desktop-btn{display:none}
-
-  .hero{grid-template-columns:1fr;padding:40px}
-  .service-grid,.portfolio-grid,.pricing-grid{grid-template-columns:1fr}
+section {
+    animation: fadeInUp 1s ease-out forwards;
 }
