@@ -1,23 +1,23 @@
-// Mobile menu
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector(".nav");
-hamburger.onclick = () => nav.classList.toggle("active");
-
-// Scroll reveal
-const reveals = document.querySelectorAll(".reveal");
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    if(el.getBoundingClientRect().top < window.innerHeight - 100){
-      el.classList.add("active");
-    }
-  });
+// Image upload
+document.querySelectorAll('input[type="file"][data-target]').forEach(input=>{
+  input.onchange=e=>{
+    const img=document.getElementById(input.dataset.target);
+    img.src=URL.createObjectURL(e.target.files[0]);
+  };
 });
 
-// Reel hover play
-document.querySelectorAll(".reel-card video").forEach(video => {
-  video.addEventListener("mouseenter", () => video.play());
-  video.addEventListener("mouseleave", () => {
-    video.pause();
-    video.currentTime = 0;
-  });
+// Video upload + hover play
+document.querySelectorAll('.reel input').forEach(input=>{
+  input.onchange=e=>{
+    const video=input.parentElement.previousElementSibling;
+    video.src=URL.createObjectURL(e.target.files[0]);
+  };
+});
+
+document.querySelectorAll('.reel video').forEach(v=>{
+  v.onmouseenter=()=>v.play();
+  v.onmouseleave=()=>{
+    v.pause();
+    v.currentTime=0;
+  };
 });
