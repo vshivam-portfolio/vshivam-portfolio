@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shivam Vishwakarma | Video Editor</title>
+<title>Video Editor Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,142 +12,164 @@
 
 <body>
 
+<!-- NAVBAR -->
 <header>
   <div class="container nav">
-    <div class="logo">
+    <div class="brand">
       <i class="fa-solid fa-video"></i>
-      <span>Shivam.Editor</span>
     </div>
 
     <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Reels</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Works</li>
+      <li>Pricing</li>
     </ul>
 
-    <div class="hamburger" id="hamburger">
-      <i class="fa-solid fa-bars"></i>
-    </div>
+    <button class="cta">Get in Touch</button>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero reveal" id="hero">
+<section class="hero">
   <div class="container hero-grid">
-    <div>
-      <span class="badge">Professional Video Editor</span>
-      <h1>Instagram Reels &<br><span>YouTube Shorts</span></h1>
+    <div class="hero-text">
+      <span class="pill">PROFESSIONAL VIDEO EDITOR</span>
+
+      <h1>
+        Reels & Shorts<br>
+        <span>Video Editor</span>
+      </h1>
+
       <p>
-        I edit high-retention short-form videos that hook viewers,
-        boost watch time and grow accounts organically.
+        Transforming raw footage into viral content that captivates
+        audiences and drives engagement across all social media platforms.
       </p>
 
       <div class="hero-buttons">
-        <a href="#contact" class="btn primary">Hire Me</a>
-        <a href="#portfolio" class="btn outline">View Reels</a>
+        <button class="btn primary">Start Your Project</button>
+        <button class="btn outline">View Portfolio</button>
+      </div>
+
+      <div class="stats">
+        <div><h3>500+</h3><span>Videos Edited</span></div>
+        <div><h3>50M+</h3><span>Total Views</span></div>
+        <div><h3>98%</h3><span>Satisfaction</span></div>
       </div>
     </div>
 
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2000" alt="">
+    <div class="hero-media">
+      <img id="heroImage" src="" alt="">
+      <label class="upload-btn">
+        <input type="file" accept="image/*" data-target="heroImage">
+        Change Image
+      </label>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section">
+  <div class="container about-grid">
+    <div class="about-media">
+      <img id="aboutImage" src="">
+      <label class="upload-btn">
+        <input type="file" accept="image/*" data-target="aboutImage">
+        Change Image
+      </label>
+    </div>
+
+    <div class="about-text">
+      <span class="section-tag">ABOUT ME</span>
+      <h2>Crafting Stories That <span>Go Viral</span></h2>
+
+      <p>
+        With over 5 years of experience in video editing, I specialize in
+        creating high-impact short-form content that captures attention in
+        the first 3 seconds.
+      </p>
+
+      <div class="about-cards">
+        <div class="info-card">
+          <h3>5+ Years</h3>
+          <span>Experience</span>
+        </div>
+        <div class="info-card">
+          <h3>200+</h3>
+          <span>Happy Clients</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="section reveal" id="services">
-  <div class="container">
-    <div class="section-title">
-      <span>Services</span>
-      <h2>What I Offer</h2>
+<section class="services section">
+  <h2 class="center">What I <span>Offer</span></h2>
+
+  <div class="container service-grid">
+    <div class="service-card">Reel Editing</div>
+    <div class="service-card">Shorts Editing</div>
+    <div class="service-card highlight">Motion Graphics</div>
+    <div class="service-card">Color Grading</div>
+    <div class="service-card highlight">Social Media Optimization</div>
+    <div class="service-card">Audio Enhancement</div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio section">
+  <h2 class="center">Sample <span>Works</span></h2>
+
+  <div class="container reel-grid">
+    <div class="reel">
+      <video muted loop></video>
+      <label class="upload-btn">
+        <input type="file" accept="video/*">
+        Upload Video
+      </label>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <i class="fa-solid fa-film"></i>
-        <h3>Reel Editing</h3>
-        <p>High-retention vertical videos optimized for Instagram.</p>
-      </div>
+    <div class="reel">
+      <video muted loop></video>
+      <label class="upload-btn">
+        <input type="file" accept="video/*">
+        Upload Video
+      </label>
+    </div>
 
-      <div class="card">
-        <i class="fa-brands fa-youtube"></i>
-        <h3>YouTube Shorts</h3>
-        <p>Fast-paced Shorts that boost watch time.</p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-wand-magic-sparkles"></i>
-        <h3>Motion Graphics</h3>
-        <p>Captions, emojis & animations that pop.</p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-adjust"></i>
-        <h3>Color Grading</h3>
-        <p>Cinematic, consistent color tones.</p>
-      </div>
+    <div class="reel">
+      <video muted loop></video>
+      <label class="upload-btn">
+        <input type="file" accept="video/*">
+        Upload Video
+      </label>
     </div>
   </div>
 </section>
 
-<!-- REELS PORTFOLIO -->
-<section class="section reveal" id="portfolio">
-  <div class="container">
-    <div class="section-title">
-      <span>Portfolio</span>
-      <h2>Reels & Shorts</h2>
-      <p>Hover to preview. Tap on mobile to play.</p>
-    </div>
+<!-- PRICING -->
+<section class="pricing section">
+  <h2 class="center">Choose Your <span>Plan</span></h2>
 
-    <div class="reels-grid">
-      <!-- Reel 1 -->
-      <div class="reel-card">
-        <video src="sample1.mp4" muted loop playsinline></video>
-        <div class="reel-overlay">
-          <span>Instagram Reel</span>
-        </div>
-      </div>
-
-      <!-- Reel 2 -->
-      <div class="reel-card">
-        <video src="sample2.mp4" muted loop playsinline></video>
-        <div class="reel-overlay">
-          <span>YouTube Short</span>
-        </div>
-      </div>
-
-      <!-- Reel 3 -->
-      <div class="reel-card">
-        <video src="sample3.mp4" muted loop playsinline></video>
-        <div class="reel-overlay">
-          <span>Viral Edit</span>
-        </div>
-      </div>
-
-      <!-- Reel 4 -->
-      <div class="reel-card">
-        <video src="sample4.mp4" muted loop playsinline></video>
-        <div class="reel-overlay">
-          <span>Brand Reel</span>
-        </div>
-      </div>
-    </div>
+  <div class="container pricing-grid">
+    <div class="price-card">Starter</div>
+    <div class="price-card popular">Professional</div>
+    <div class="price-card">Enterprise</div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section reveal" id="contact">
+<section class="contact section">
+  <h2 class="center">Let’s Create Something <span>Amazing</span></h2>
+
   <div class="container contact-grid">
-    <div>
-      <h2>Let’s Work Together</h2>
-      <p>Email me to start your project.</p>
-      <strong>shivam.editor@email.com</strong>
-    </div>
+    <div class="contact-card">hello@videoeditor.com</div>
 
     <form class="contact-form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Email">
+      <input placeholder="Your Name">
+      <input placeholder="Email">
       <textarea placeholder="Project Details"></textarea>
       <button class="btn primary">Send Message</button>
     </form>
@@ -155,7 +177,7 @@
 </section>
 
 <footer>
-  © 2026 Shivam Vishwakarma — Video Editor
+  © 2025 Video Editor Portfolio
 </footer>
 
 <script src="script.js"></script>
