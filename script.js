@@ -1,23 +1,22 @@
-// Image upload
-document.querySelectorAll('input[type="file"][data-target]').forEach(input=>{
-  input.onchange=e=>{
-    const img=document.getElementById(input.dataset.target);
-    img.src=URL.createObjectURL(e.target.files[0]);
-  };
+// Smooth scroll
+document.querySelectorAll("[data-scroll]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(btn.dataset.scroll)
+      .scrollIntoView({ behavior: "smooth" });
+  });
 });
 
-// Video upload + hover play
-document.querySelectorAll('.reel input').forEach(input=>{
-  input.onchange=e=>{
-    const video=input.parentElement.previousElementSibling;
-    video.src=URL.createObjectURL(e.target.files[0]);
-  };
-});
+// Image upload preview
+document.querySelectorAll(".card input").forEach(input => {
+  input.addEventListener("change", e => {
+    const file = e.target.files[0];
+    if (!file) return;
 
-document.querySelectorAll('.reel video').forEach(v=>{
-  v.onmouseenter=()=>v.play();
-  v.onmouseleave=()=>{
-    v.pause();
-    v.currentTime=0;
-  };
+    const reader = new FileReader();
+    reader.onload = () => {
+      input.parentElement.style.background =
+        `url(${reader.result}) center/cover`;
+    };
+    reader.readAsDataURL(file);
+  });
 });
