@@ -1,8 +1,10 @@
-// floating nav active state
-document.querySelectorAll(".floating-nav button").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    document.querySelectorAll(".floating-nav button")
-      .forEach(b=>b.classList.remove("active"));
-    btn.classList.add("active");
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add("active");
+    }
   });
 });
