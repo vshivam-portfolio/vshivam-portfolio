@@ -1,117 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio 2025</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liquid Glass Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 
-<!-- Grain Overlay -->
 <div class="grain"></div>
+<div class="glow"></div>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-left">
-    <div class="profile-circle">
-      <img src="profile.jpg" alt="Profile">
-    </div>
-  </div>
+<!-- FLOAT NAV -->
+<div class="floating-nav">
+  <button class="active">Home</button>
+  <button>Summary</button>
+  <button>Experience</button>
+  <button>Skills</button>
+  <button>Links</button>
+</div>
 
-  <div class="hero-center">
-    <h1>PORTFOLIO <span>2025</span></h1>
-    <p>Content Creator / Designer</p>
+<div class="container">
 
-    <div class="menu">
-      <button data-scroll="#about">START</button>
-      <button data-scroll="#projects">OPTIONS</button>
-      <button data-scroll="#contact">EXIT</button>
-    </div>
-  </div>
-</section>
+  <!-- HERO -->
+  <div class="glass hero">
+    <div class="hero-text">
+      <p class="status">● Open to work</p>
+      <h3>UX/UI Designer</h3>
+      <h1>Tyrone<br>Brooks</h1>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-left">
-    <img src="portrait.jpg" alt="Portrait">
-  </div>
-
-  <div class="about-right">
-    <h2>ABOUT ME</h2>
-    <p>
-      Hi, I'm a creative content creator & designer focused on cinematic visuals,
-      branding, thumbnails, and digital storytelling with a modern aesthetic.
-    </p>
-
-    <h3>SOFTWARE SKILLS</h3>
-    <div class="skills">
-      <img src="icons/ps.png">
-      <img src="icons/ai.png">
-      <img src="icons/lr.png">
-      <img src="icons/capcut.png">
-    </div>
-
-    <div class="info-grid">
-      <div>
-        <h4>EDUCATION</h4>
-        <p>2019 – 2022<br>Visual Design</p>
+      <div class="contact">
+        <span>📧 tyrone.brooks@gmail.com</span>
+        <span>🔗 linkedin.com/in/tyrone-brooks</span>
+        <span>📍 Atlanta, US</span>
       </div>
-      <div>
-        <h4>EXPERIENCE</h4>
-        <p>TikTok & YouTube Content<br>200K+ Reach</p>
-      </div>
+
+      <button class="btn">Download CV</button>
     </div>
 
-    <h4>LANGUAGES</h4>
-    <div class="language">
-      <span>English</span><div class="bar"><div style="width:90%"></div></div>
-      <span>Hindi</span><div class="bar"><div style="width:100%"></div></div>
+    <div class="hero-image">
+      <div class="light"></div>
     </div>
   </div>
-</section>
 
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-  <h2>RECAP PROJECT 2025</h2>
+  <!-- SKILLS -->
+  <div class="glass skills">
+    <div class="tools">
+      <span>Figma</span>
+      <span>Photoshop</span>
+      <span>Illustrator</span>
+      <span>Sketch</span>
+      <span>Blender</span>
+      <span>Midjourney</span>
+    </div>
 
-  <div class="grid">
-    <div class="card"><input type="file" accept="image/*"></div>
-    <div class="card"><input type="file" accept="image/*"></div>
-    <div class="card"><input type="file" accept="image/*"></div>
-    <div class="card"><input type="file" accept="image/*"></div>
-    <div class="card"><input type="file" accept="image/*"></div>
-    <div class="card"><input type="file" accept="image/*"></div>
-  </div>
-</section>
+    <div class="lang">
+      <h3>Languages</h3>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-left">
-    <img src="profile.jpg">
-  </div>
+      <label>English</label>
+      <div class="bar"><div style="width:95%"></div></div>
 
-  <div class="contact-right">
-    <h2>CONTACT ME</h2>
-    <div class="socials">
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-      <a href="#">YouTube</a>
-      <a href="#">Pinterest</a>
+      <label>Spanish</label>
+      <div class="bar"><div style="width:70%"></div></div>
+
+      <label>French</label>
+      <div class="bar"><div style="width:50%"></div></div>
     </div>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <h1>THANK YOU <span>2025</span></h1>
-
-  <div class="years">
-    <div class="year-card">2023</div>
-    <div class="year-card">2024</div>
+  <!-- PROJECT -->
+  <div class="glass project">
+    <div class="phone"></div>
+    <div>
+      <p class="back">← Back to Home Page</p>
+      <h2>Flowstate</h2>
+      <p class="tag">Web Application</p>
+      <p class="desc">
+        Redesigned the online shopping experience with seamless navigation,
+        interactive product display and modern UI.
+      </p>
+    </div>
   </div>
-</footer>
+
+</div>
 
 <script src="script.js"></script>
 </body>
